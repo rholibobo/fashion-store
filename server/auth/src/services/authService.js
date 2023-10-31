@@ -29,7 +29,7 @@ class AuthService {
       return { success: false, message: "Invalid username or password" };
     }
 
-    const token = jwt.sign({ id: user._id }, config.jwtSecret);
+    const token = jwt.sign({ id: user._id }, config.jwtSecret, {expiresIn:60*60*24*3});
 
     return { success: true, token };
   }

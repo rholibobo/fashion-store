@@ -1,0 +1,28 @@
+.links{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links_text{
+    font-size: 0.9rem;
+
+}
+
+.header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.active{
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+   color: #CE5A67;
+   border-bottom: 1.5px dotted #CE5A67;
+}

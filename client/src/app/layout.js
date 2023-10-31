@@ -4,9 +4,7 @@ import { Poppins } from "next/font/google";
 
 import ThemeRegistry from "@/utils/ThemeRegistry";
 
-// import { Inter } from 'next/font/google'
-
-// const inter = Inter({ subsets: ['latin'] })
+import { Navbar } from "@/components/Header/Navbar";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -23,7 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
+        <ThemeRegistry options={{ key: "mui" }}>
+          <Navbar />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );

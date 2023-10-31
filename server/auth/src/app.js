@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const config = require("./config");
 const authMiddleware = require("./middlewares/authMiddleware");
 const AuthController = require("./controllers/authController");
+const cookieParser = require('cookie-parser');
 
 class App{
   constructor() {
@@ -29,6 +30,7 @@ class App{
   setMiddlewares() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
+    this.app.use(cookieParser());
   }
 
   setRoutes() {

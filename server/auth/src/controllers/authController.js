@@ -1,4 +1,5 @@
 const AuthService = require("../services/authService");
+const cookieParser = require('cookie-parser');
 
 //class that holds the logic for the authentication routes
 class AuthController {
@@ -12,7 +13,9 @@ class AuthController {
     const result = await this.authService.login(email, password);
 
     if (result.success) {
+      res.cookie('authToken', result.token);
       res.json({ token: result.token });
+      
     } else {
       res.status(400).json({ message: result.message });
     }

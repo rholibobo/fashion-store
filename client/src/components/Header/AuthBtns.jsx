@@ -15,6 +15,7 @@ export default function AuthButtons() {
             textTransform: "capitalize",
             backgroundColor: "#CE5A67",
             color: "#ffffff",
+            boxShadow: "none",
             ":hover": { backgroundColor: "#CE5B67" },
           }}
         >
@@ -29,6 +30,7 @@ export default function AuthButtons() {
             textTransform: "capitalize",
             color: "#CE5A67",
             backgroundColor: "#ffffff",
+            // boxShadow: "none",
             ":hover": { backgroundColor: "#f6f6f6" },
           }}
         >

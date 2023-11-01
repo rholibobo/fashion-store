@@ -10,7 +10,7 @@ export function Navbar() {
   return (
     <main>
       <header className={styles.header}>
-        <Box sx={{display: "flex", gap: "5px", alignItems:"center"}}>
+        <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
           <Image
             src={Logo}
             alt="logo"

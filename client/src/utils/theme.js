@@ -4,6 +4,7 @@ const theme = createTheme({
  palette: {
    primary: {
      main: "#fcba03",
+     badge: "#CE5A67"
    },
  },
  typography: {

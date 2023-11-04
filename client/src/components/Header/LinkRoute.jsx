@@ -7,19 +7,14 @@ import styles from "./header.module.css";
 import Link from "next/link";
 
 import AuthButtons from "./AuthBtns";
+import {AuthIcons} from "./AuthIcons";
+import { Dropdown } from "./Dropdown";
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export function LinkRoutes() {
-  // const [dropdown, setDropdown] = useState(false);
-
-  // const changeDropdown = () => {
-  //   setDropdown((prev) => !prev)
-  // }
-  // const flexDropdown = () => {
-  //   setDropdown(false)
-  // }
+  const user = true;
 
   const pathname = usePathname();
   return (
@@ -48,38 +43,8 @@ export function LinkRoutes() {
             </p>
           </Link>
 
-          <div className={styles.pages}>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
-              <p className={styles.links_text}>Pages</p>
-              <ArrowDropDown />
-            </Box>
-
-            <div className={styles.pages_dropdown}>
-              <div className={styles.pages_products}>
-                <Box
-                  sx={{ display: "flex", alignItems: "center", gap: "45px" }}
-                >
-                  <p className={styles.links_pages}>Products Page</p>
-                  <ArrowRight />
-                </Box>
-
-                <div className={styles.products_dropdown}>
-                  <p className={styles.links_pages}>Men's Wears</p>
-                  <Divider />
-                  <p className={styles.links_pages}>Women's Wears</p>
-                </div>
-              </div>
-
-              <Divider />
-              <p className={styles.links_pages}>Shops Page</p>
-            </div>
-          </div>
+              {/* Dropdowns */}
+              <Dropdown />
 
           <Link href="#">
             <p
@@ -92,7 +57,7 @@ export function LinkRoutes() {
           </Link>
         </Box>
       
-      <AuthButtons />
+      {user ? <AuthIcons /> : <AuthButtons />}
     </div>
   );
 }

@@ -13,7 +13,7 @@ class AuthController {
     const result = await this.authService.login(email, password);
 
     if (result.success) {
-      res.cookie('authToken', result.token);
+      res.cookie('authToken', result.token, {maxAge: 1000 * 60 * 60 * 24});
       res.json({ token: result.token });
       
     } else {

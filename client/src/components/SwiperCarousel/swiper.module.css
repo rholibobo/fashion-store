@@ -1,0 +1,21 @@
+.bg{
+    width: 100%;
+    height: 95vh;
+    background-color: #3b3b40;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+.bg1{
+    background-image: url(../../../public/images/signup/manfashion.jpeg);
+}
+.bg2{
+    background-image: url(../../../public/images/signup/womanfashion.jpeg);
+}
+.bg3{
+    background-image: url(../../../public/images/signup/manfashion2.jpeg);
+}
+.bg4{
+    background-image: url(../../../public/images/signup/womanfashion2.jpeg);
+}

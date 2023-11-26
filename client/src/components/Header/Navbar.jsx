@@ -10,8 +10,16 @@ import Image from "next/image";
 import Logo from "../../../public/logo/fslogo.png";
 import { MobileAuthIcons } from "./AuthIcons";
 
+import { usePathname } from "next/navigation";
+
 export function Navbar() {
   const isMobileView = useMediaQuery("(max-width:1000px)");
+  const pathname = usePathname();
+
+  if (pathname === '/signup/designer') {
+    return null;
+  }
+
   return (
     <main>
       <header className={styles.header}>

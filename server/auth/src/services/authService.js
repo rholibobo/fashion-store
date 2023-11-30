@@ -11,13 +11,18 @@ class AuthService {
     this.userRepository = new UserRepository();
   }
 
-  async findUserByUsername(email) {
-    const user = await User.findOne({ email });
+  async findUserById(id) {
+    const user = await this.userRepository.getAUserById(id);
+    return user;
+  }
+
+  async findAUser(email) {
+    const user = await this.userRepository.getUserByUserEmail(email);
     return user;
   }
 
   async login(email, password) {
-    const user = await this.userRepository.getUserByUsername(email);
+    const user = await this.userRepository.getUserByUserEmail(email);
 
     if (!user) {
       return { success: false, message: "Invalid username or password" };
@@ -31,7 +36,7 @@ class AuthService {
 
     const token = jwt.sign({ id: user._id }, config.jwtSecret, {expiresIn:60*60*24*3});
 
-    return { success: true, token };
+    return { success: true, token, user };
   }
 
   async register(user) {
@@ -44,6 +49,10 @@ class AuthService {
   async deleteTestUsers() {
     // Delete all users with a username that starts with "test"
     await User.deleteMany({ email: /^test/ });
+  }
+
+  async findUserAndUpdate(id, update){
+      return await this.userRepository.findAUserAndUpdateUser(id, update);
   }
 }
 

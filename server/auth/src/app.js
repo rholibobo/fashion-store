@@ -4,6 +4,7 @@ const config = require("./config");
 const authMiddleware = require("./middlewares/authMiddleware");
 const AuthController = require("./controllers/authController");
 const cookieParser = require('cookie-parser');
+require('dotenv').config()
 
 class App{
   constructor() {
@@ -36,6 +37,8 @@ class App{
   setRoutes() {
     this.app.post("/login", (req, res) => this.authController.login(req, res));
     this.app.post("/register", (req, res) => this.authController.register(req, res));
+    this.app.post("/forgot-password", (req, res) => this.authController.forgotPasswordByEmail(req, res));
+    this.app.put("/reset-password/:id/:token", (req, res) => this.authController.updatePassword(req, res));
     this.app.get("/dashboard", authMiddleware, (req, res) => res.json({ message: "Welcome to dashboard" }));
   }
 

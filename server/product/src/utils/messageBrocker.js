@@ -1,24 +1,23 @@
-const amqplib = require("amqplib");
-const amqp = require('amqp');
+const amqp = require("amqplib");
 
 class MessageBroker {
   constructor() {
     this.channel = null;
   }
- 
+
   async connect() {
     console.log("Connecting to RabbitMQ...");
 
     setTimeout(async () => {
       try {
-        const connection = await amqplib.connect("http://localhost:5672");
+        const connection = await amqp.connect("amqp://localhost:5672");
         this.channel = await connection.createChannel();
         await this.channel.assertQueue("products");
         console.log("RabbitMQ connected");
       } catch (err) {
         console.error("Failed to connect to RabbitMQ:", err.message);
       }
-    }, 10000); // delay 10 seconds to wait for RabbitMQ to start
+    }, 500); // delay 10 seconds to wait for RabbitMQ to start
   }
 
   async publishMessage(queue, message) {
@@ -56,4 +55,4 @@ class MessageBroker {
   }
 }
 
-module.exports = { MessageBroker };
+module.exports = {MessageBroker};

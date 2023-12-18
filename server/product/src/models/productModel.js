@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema({
     description: {
         type: String
     },
-}, { collection: 'products' });
+}, { timestamps: true});
 
 const Product = mongoose.model("Product", productSchema);
 

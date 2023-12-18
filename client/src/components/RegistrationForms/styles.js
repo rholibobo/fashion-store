@@ -9,6 +9,12 @@ export const SignupContainer = styled.div`
   gap: 15px;
   padding: 1rem 1rem;
 `
+export const SigninContainer = styled.div`
+  width: 100%;
+  display: flex;
+  // gap: 15px;
+  padding: 1rem 1rem;
+`
 export const StyledInputLabel = styled(InputLabel)(({ theme }) => ({
   // Default label styles
   color: "#8b7d7d",

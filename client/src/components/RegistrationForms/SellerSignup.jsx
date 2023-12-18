@@ -36,7 +36,6 @@ import nigeriaStates from "./nigeria-states.json";
 const registerSchema = Yup.object().shape({
   firstName: Yup.string().min(2).max(30).required("First Name is required"),
   lastName: Yup.string().min(2).max(30).required("Last Name is required"),
-  companyName: Yup.string().min(2).max(30).required("First Name is required"),
   email: Yup.string()
     .email("Must be a valid email")
     .max(255)
@@ -60,7 +59,6 @@ const registerSchema = Yup.object().shape({
 const initialValues = {
   firstName: "",
   lastName: "",
-  companyName: "",
   email: "",
   phoneNumber: "",
   location: "",
@@ -335,7 +333,7 @@ const SellerSignupForm = () => {
                         value={values.confirm_password}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        label="Password"
+                        label="Confirm Password"
                         name="confirm_password"
                         endAdornment={
                           <InputAdornment position="end">
@@ -406,7 +404,7 @@ const SellerSignupForm = () => {
                     <Typography variant="body2" gutterBottom>
                       Have an Account?{" "}
                     </Typography>
-                    <Link style={{ color: "blue" }} href="#">
+                    <Link style={{ color: "blue" }} href="/login/designer">
                       <Typography variant="body2" gutterBottom>
                         Login
                       </Typography>
@@ -414,7 +412,7 @@ const SellerSignupForm = () => {
                   </Box>
 
                   <Box>
-                    <Link style={{ color: "blue" }} href="#">
+                    <Link style={{ color: "blue" }} href="/signup/client">
                       <Typography variant="body2" gutterBottom>
                         Sign up as Customer?
                       </Typography>

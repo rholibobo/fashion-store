@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import ThemeRegistry from "@/utils/ThemeRegistry";
 
 import { Navbar } from "@/components/Header/Navbar";
+import { ReduxProvider } from "@/redux/provider";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -21,10 +22,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ThemeRegistry options={{ key: "mui" }}>
-          <Navbar />
-          {children}
-        </ThemeRegistry>
+        <ReduxProvider>
+          <ThemeRegistry options={{ key: "mui" }}>
+            <Navbar />
+            {children}
+          </ThemeRegistry>
+        </ReduxProvider>
       </body>
     </html>
   );

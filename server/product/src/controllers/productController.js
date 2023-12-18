@@ -92,7 +92,8 @@ const getOrderStatus = async (req, res, next) => {
 
 const getAllProducts = async (req, res, next) => {
     try {
-        const token = req.headers.authorization;
+        //const token = req.headers.authorization;
+        const token = req.cookies.authToken
         if (!token) {
             return res.status(401).json({ message: "Unauthorized" });
         }

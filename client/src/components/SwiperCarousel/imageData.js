@@ -1,10 +1,10 @@
-import image1 from "../../../public/images/signup/manfashion.jpeg";
-import image2 from "../../../public/images/signup/womanfashion.jpeg";
-import image3 from "../../../public/images/signup/manfashion2.jpeg";
-import image4 from "../../../public/images/signup/womanfashion2.jpeg";
+import image1 from "../../../public/images/hero/slide-2.jpg";
+import image2 from "../../../public/images/hero/slide-3.jpg";
+import image3 from "../../../public/images/hero/slide-4.jpg";
+import image4 from "../../../public/images/hero/slide-5.jpg";
 
 const image_data = {
-    signup: [
+    hero: [
         image1,
         image2,
         image3,

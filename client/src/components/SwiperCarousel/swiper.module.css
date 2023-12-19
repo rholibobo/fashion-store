@@ -19,3 +19,17 @@
 .bg4{
     background-image: url(../../../public/images/signup/womanfashion2.jpeg);
 }
+
+.heroImages{
+    width: 80%;
+    height: 100%;
+   
+}
+
+.watch{
+    position: absolute;
+    top: 0;
+    right: -15%;
+    width: 30%;
+    height: auto;
+}

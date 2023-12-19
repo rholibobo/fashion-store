@@ -73,7 +73,8 @@ const SellerLoginForm = () => {
             align="center"
             fontWeight="bold"
             gutterBottom
-            sx={{ color: "#F4BF96" }}
+            // sx={{ color: "#F4BF96" }}
+            color="backgroundtext.main"
           >
             Welcome to The Fashion Store
           </Typography>
@@ -83,7 +84,8 @@ const SellerLoginForm = () => {
             align="center"
             fontWeight="bold"
             gutterBottom
-            sx={{ color: "#F4BF96" }}
+            // sx={{ color: "#F4BF96" }}
+            color="backgroundtext.main"
           >
             Login as a Designer
           </Typography>

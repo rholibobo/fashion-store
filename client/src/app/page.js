@@ -1,9 +1,14 @@
 import styles from "./page.module.css";
 
+import { HeroContainer } from "@/components/styles/globalStyles";
+import HeroSection from "@/components/Home/HeroSection";
+
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Homepage</h1>
+      <HeroContainer>
+        <HeroSection />
+      </HeroContainer>
     </main>
-  )
+  );
 }

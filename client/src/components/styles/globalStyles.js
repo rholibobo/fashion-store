@@ -15,6 +15,7 @@ export const FlexContainer = styled.div`
     width: 85%;
     margin: 0 auto;
     display: flex; 
+    position: relative;
 `
 export const DisplayFlex = styled.div`
     display: flex; 

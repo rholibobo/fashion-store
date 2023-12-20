@@ -22,14 +22,45 @@ import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-
+  const [indicatorIndex, setIndicatorIndex] = useState(0);
+  let checkIndex = 0;
   const handleSwiperSlideChange = (swiper) => {
     setSelectedIndex(swiper.activeIndex);
   };
 
+  const determineColor = (index) => {
+    return index === selectedIndex
+      ? "bg-backgroundtext p-2"
+      : "bg-textgray p-1";
+  };
+  const showLine = (index) => {
+    return index === selectedIndex
+      ? "bg-background w-12 h-[0.1rem] rounded-sm"
+      : "hidden";
+  };
+
   return (
     <FlexContainer>
-      <Box sx={{ width: "50%", position: "relative"}}>
+      <Box className="w-1/2 h-32 flex flex-col justify-between absolute bottom-[40%] -left-24 z-10">
+        <Box className="flex items-center gap-2 py-2 pl-2">
+          <div className={`${determineColor(0)} rounded-[50%]`}></div>
+          <div className={`${showLine(0)}`}></div>
+        </Box>
+
+        <Box className="flex items-center gap-2 py-2 pl-2">
+          <div className={`${determineColor(1)} rounded-[50%]`}></div>
+          <div className={`${showLine(1)}`}></div>
+        </Box>
+        <Box className="flex items-center gap-2 py-2 pl-2">
+          <div className={`${determineColor(2)} rounded-[50%]`}></div>
+          <div className={`${showLine(2)}`}></div>
+        </Box>
+        <Box className="flex items-center gap-2 py-2 pl-2">
+          <div className={`${determineColor(3)} rounded-[50%]`}></div>
+          <div className={`${showLine(3)}`}></div>
+        </Box>
+      </Box>
+      <Box className="w-1/2 relative">
         <Swiper
           onSlideChange={(swiper) => handleSwiperSlideChange(swiper)}
           modules={[
@@ -42,7 +73,7 @@ export default function HeroSection() {
           ]}
           effect={"fade"}
           autoplay={{
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           spaceBetween={50}
@@ -63,23 +94,12 @@ export default function HeroSection() {
 
         <Box
           bgcolor="background.main"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            bottom: "10%",
-            right: "5%",
-            width: "20%",
-            height: "20%",
-            zIndex: "5",
-          }}
+          className="w-32 h-32 flex justify-center items-center absolute bottom-[10%] right-[5%] z-10"
         >
           <Typography
             color="whitebackground.main"
             variant="h4"
             fontWeight="bold"
-            gutterBottom
           >
             {`0${selectedIndex + 1}`}
           </Typography>
@@ -118,35 +138,20 @@ export default function HeroSection() {
           </Typography>
         </Box>
 
+        <Box color="secondary.main" className="flex gap-3">
+          <Box className="animate-btn flex items-center justify-center w-[40%] h-[10vh] border border-solid border-[#989898] cursor-pointer hover:text-white hover:border-[#F4BF96] ">
+            <Typography>Shop Women</Typography>
+          </Box>
 
-        <Box className="flex gap-3">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "35%",
-            height: "8vh",
-            border: "1px solid #F4BF96",
-          }}
-        >
-          <Typography gutterBottom>Shop Women</Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "35%",
-            height: "8vh",
-            border: "1px solid #F4BF96",
-          }}
-        >
-          <Typography gutterBottom>Shop Men</Typography>
+          <Box
+            bgcolor="background.main"
+            color="whitebackground.main"
+            className="action flex items-center justify-center w-[40%] h-[10vh] border border-solid hover:border-[#989898] cursor-pointer"
+          >
+            <Typography>Shop Men</Typography>
+          </Box>
         </Box>
       </Box>
-      </Box>
-      
     </FlexContainer>
   );
 }

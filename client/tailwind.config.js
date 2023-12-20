@@ -9,7 +9,15 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: "#F4BF96",
+        backgroundtext: "#F4BF96",
+        textgray: "#989898",
+        textwhite: "#ffffff",
+        textblack: "#000"
+      }
+    },
   },
   plugins: [],
 };

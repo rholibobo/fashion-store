@@ -80,8 +80,8 @@ export default function HeroSection() {
           spaceBetween={50}
           slidesPerView={1}
           navigation={{
-            nextEl: '.button-next', 
-            prevEl: '.button-prev',
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
           }}
         >
           {image_data["hero"].map((image, index) => (
@@ -121,12 +121,9 @@ export default function HeroSection() {
 
       <Box className="w-[35%] pt-6 flex flex-col justify-between">
         <Box sx={{ position: "relative" }}>
-          <Typography variant="h3" gutterBottom>
-            Discover nEW Arrivals
-          </Typography>
-          <Typography sx={{ marginTop: "-1.5rem" }} color="secondary.main">
-            Latest collection
-          </Typography>
+          <h3 className="font-header text-6xl font-medium">Discover</h3>
+          <h3 className="font-header text-6xl font-medium">New Arrivals</h3>
+          <Typography color="secondary.main">Latest collection</Typography>
 
           <Image src={wristwatch} alt="watch" className={style.watch} />
         </Box>

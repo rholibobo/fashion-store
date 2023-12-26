@@ -16,6 +16,9 @@ module.exports = {
         textgray: "#989898",
         textwhite: "#ffffff",
         textblack: "#000"
+      },
+      fontFamily:{
+        'header': ['Playfair']
       }
     },
   },

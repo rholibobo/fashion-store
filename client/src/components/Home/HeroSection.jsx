@@ -19,6 +19,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { MoveLeft, MoveRight } from "lucide-react";
 
 export default function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -73,11 +74,15 @@ export default function HeroSection() {
           ]}
           effect={"fade"}
           autoplay={{
-            delay: 4000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           spaceBetween={50}
           slidesPerView={1}
+          navigation={{
+            nextEl: '.button-next', 
+            prevEl: '.button-prev',
+          }}
         >
           {image_data["hero"].map((image, index) => (
             <Box sx={{}} key={index}>
@@ -105,18 +110,18 @@ export default function HeroSection() {
           </Typography>
         </Box>
       </Box>
+      <Box className="w-[8%] flex justify-end flex-col">
+        <div className="button-prev">
+          <MoveLeft size={45} className="cursor-pointer" />
+        </div>
+        <div className="button-next">
+          <MoveRight size={45} className="-mt-4 cursor-pointer" />
+        </div>
+      </Box>
 
-      <Box
-        sx={{
-          width: "50%",
-          paddingTop: "1.5rem",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+      <Box className="w-[35%] pt-6 flex flex-col justify-between">
         <Box sx={{ position: "relative" }}>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h3" gutterBottom>
             Discover nEW Arrivals
           </Typography>
           <Typography sx={{ marginTop: "-1.5rem" }} color="secondary.main">

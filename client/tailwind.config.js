@@ -14,6 +14,7 @@ module.exports = {
         background: "#F4BF96",
         backgroundtext: "#F4BF96",
         textgray: "#989898",
+        grayshade: "#8d7f77",
         textwhite: "#ffffff",
         textblack: "#000"
       },

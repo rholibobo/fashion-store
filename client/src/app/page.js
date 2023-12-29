@@ -8,6 +8,10 @@ import Image from "next/image";
 import Sctn2 from "../../public/images/homepage/s-2.png";
 import Sctn3 from "../../public/images/homepage/scn3.2.png";
 import Testimonials from "@/components/Home/Testimonials";
+import { FileText, Globe, MessageSquareText, ShieldCheck } from "lucide-react";
+import { CiGlobe } from "react-icons/ci";
+import { FiFileText } from "react-icons/fi";
+import { RiSecurePaymentLine } from "react-icons/ri";
 
 export default function Home() {
   return (
@@ -86,6 +90,51 @@ export default function Home() {
 
       {/* Section 5 */}
       <Testimonials />
+
+      {/* Section 6 */}
+
+      <Box className="flex justify-between gap-6 w-[90%] mt-8 my-0 mx-auto">
+        <Box>
+          <Globe size="100" strokeWidth={1} />
+          <p className="font-header text-2xl">International Shipping</p>
+          <br />
+          <p className="text-grayshade text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
+            augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
+            objects were.
+          </p>
+        </Box>
+        <Box>
+          <FileText size="100" strokeWidth={1} />
+          <p className="font-header text-2xl">Customer Care</p>
+          <br />
+          <p className="text-grayshade text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
+            augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
+            objects were.
+          </p>
+        </Box>
+        <Box>
+        <ShieldCheck size="100" strokeWidth={1} />
+          <p className="font-header text-2xl">Secure Payment</p>
+          <br />
+          <p className="text-grayshade text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
+            augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
+            objects were.
+          </p>
+        </Box>
+        <Box>
+          <MessageSquareText size="100" strokeWidth={1} />
+          <p className="font-header text-2xl">24/7 Support</p>
+          <br />
+          <p className="text-grayshade text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
+            augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
+            objects were.
+          </p>
+        </Box>
+      </Box>
     </main>
   );
 }

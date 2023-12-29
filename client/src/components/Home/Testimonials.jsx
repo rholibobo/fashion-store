@@ -2,13 +2,11 @@
 
 import { Box } from "@mui/material";
 // //// SWIPER IMPORTS /////// //
-import {
-  Navigation,
-  
-} from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { UserRound } from "lucide-react";
+import { MoveLeft, MoveRight, UserRound } from "lucide-react";
+import { IoPersonSharp } from "react-icons/io5";
 
 const testimonialData = [
   {
@@ -40,12 +38,12 @@ const testimonialData = [
 const Testimonials = () => {
   return (
     <div className="mt-8 w-full h-screen flex">
-      <Box className="w-[60%] bg-background flex items-center">
-        <Box className="w-[100%] flex items-end ml-12 pt-4 bg-gray-100 bg-opacity-50 ">
+      <Box className="scntestimonial w-[60%] flex items-center">
+        <Box className="w-[100%] flex items-end ml-12 pt-4 bg-gray-100 bg-opacity-20 ">
           <Swiper
             modules={[Navigation]}
             effect={"fade"}
-            spaceBetween={50}
+            spaceBetween={30}
             slidesPerView={2}
             navigation={{
               nextEl: ".button-next",
@@ -53,13 +51,21 @@ const Testimonials = () => {
             }}
           >
             {testimonialData.map((info, index) => (
-              <SwiperSlide >
-                <Box key={index} className="bg-white h-80 overflow-auto py-4 pl-4 pr-8">
+              <SwiperSlide>
+                <Box
+                  key={index}
+                  className="bg-white h-80 overflow-auto py-4 pl-4 pr-8"
+                >
                   <Box className="flex items-center gap-6">
-                    <UserRound />
+                    <Box className="w-12 h-12 rounded-full bg-background flex justify-center items-center">
+                      <IoPersonSharp />
+                    </Box>
+
                     <Box>
-                      <h3>{info.name}</h3>
-                      <h5>{info.title}</h5>
+                      <h5 className="font-header text-2xl font-medium">
+                        {info.name}
+                      </h5>
+                      <p className="text-textgray text-sm">{info.title}</p>
                     </Box>
                   </Box>
                   <br />
@@ -69,8 +75,16 @@ const Testimonials = () => {
             ))}
           </Swiper>
         </Box>
+        <Box className="w-[8%] flex flex-col ml-12">
+          <div className="button-prev">
+            <MoveLeft size={45} className="cursor-pointer" />
+          </div>
+          <div className="button-next">
+            <MoveRight size={45} className="-mt-4 cursor-pointer" />
+          </div>
+        </Box>
       </Box>
-      <Box className="w-[40%] mt-6 bg-white">
+      <Box className="w-[40%] mt-4 bg-white flex flex-col justify-between">
         <h3 className="w-1/2 font-header text-5xl my-0 mx-auto font-medium">
           Client Testimonials
         </h3>

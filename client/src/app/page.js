@@ -7,6 +7,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Sctn2 from "../../public/images/homepage/s-2.png";
 import Sctn3 from "../../public/images/homepage/scn3.2.png";
+import Testimonials from "@/components/Home/Testimonials";
 
 export default function Home() {
   return (
@@ -49,8 +50,8 @@ export default function Home() {
       {/* Section 3 */}
 
       <Box className="w-full h-screen flex relative justify-end">
-        <Box className="w-[80%] absolute left-20 top-12 z-10">
-          <Image src={Sctn3} alt="scn3" className="w-1/2 h-full" />
+        <Box className="w-[40%] absolute left-20 top-12">
+          <Image src={Sctn3} alt="scn3" className="w-full h-full" />
         </Box>
 
         <Box className="w-[70%] bg-background flex justify-end items-center">
@@ -82,6 +83,9 @@ export default function Home() {
       <br />
       <br />
       <Section4 />
+
+      {/* Section 5 */}
+      <Testimonials />
     </main>
   );
 }

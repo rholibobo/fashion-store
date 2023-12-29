@@ -11,6 +11,12 @@ export const HeroContainer = styled.div`
     padding-bottom: 2rem;
     
 `
+export const SectionFour = styled.div`
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding-bottom: 2rem; 
+`
 export const FlexContainer = styled.div`
     width: 85%;
     margin: 0 auto;

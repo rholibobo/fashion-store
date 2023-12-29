@@ -70,4 +70,23 @@ a {
 }
 /*  */
 
-
+.scntestimonial{
+  position: relative;
+  background-color: #f4bf96;
+}
+.scntestimonial::before{
+  content: "";
+  background-color: #e89658;
+  /* display: flex;
+  justify-items: center;
+  align-items: center; */
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../public/images/homepage/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-blend-mode: soft-light;
+}

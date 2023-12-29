@@ -215,6 +215,7 @@ const Section4 = () => {
         </Box>
       )}
       <br />
+      <br />
       <Box className="flex justify-center">
         <Box className="flex items-center justify-center gap-4 w-[20%] h-[9vh] bg-black text-white cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
           <Typography variant="body2">View More </Typography>

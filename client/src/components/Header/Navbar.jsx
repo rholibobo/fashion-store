@@ -11,10 +11,27 @@ import Logo from "../../../public/logo/fslogo.png";
 import { MobileAuthIcons } from "./AuthIcons";
 
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const isMobileView = useMediaQuery("(max-width:1000px)");
   const pathname = usePathname();
+
+  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      setIsHeaderFixed(scrollPosition > 600);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const isDesignerRegPage = "/signup/designer";
   const isDesignerLoginPage = "/login/designer";
@@ -34,8 +51,14 @@ export function Navbar() {
     return null;
   } else {
     return (
-      <main>
-        <header className={styles.header}>
+      <main
+        className={`${
+          isHeaderFixed ? "fixed top-0 left-0 w-full  bg-gray-50 z-50 transition-all duration-500 ease-in bg-opacity-95" : ""
+        }`}
+      >
+        <header
+          className={`w-[90%] my-0 mx-auto flex justify-between items-center py-6`}
+        >
           <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
             <Image src={Logo} alt="logo" className={styles.logo} />
             <Typography gutterBottom>Logo</Typography>

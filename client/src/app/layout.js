@@ -6,6 +6,7 @@ import ThemeRegistry from "@/utils/ThemeRegistry";
 
 import { Navbar } from "@/components/Header/Navbar";
 import { ReduxProvider } from "@/redux/provider";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           <ThemeRegistry options={{ key: "mui" }}>
             <Navbar />
             {children}
+            <Footer />
           </ThemeRegistry>
         </ReduxProvider>
       </body>

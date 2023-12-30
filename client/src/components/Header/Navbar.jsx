@@ -53,7 +53,9 @@ export function Navbar() {
     return (
       <main
         className={`${
-          isHeaderFixed ? "fixed top-0 left-0 w-full  bg-gray-50 z-50 transition-all duration-500 ease-in bg-opacity-95" : ""
+          isHeaderFixed
+            ? "fixed top-0 left-0 w-full  bg-gray-50 z-50 transition-all duration-500 ease-in bg-opacity-95"
+            : ""
         }`}
       >
         <header

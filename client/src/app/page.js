@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* Section 6 */}
 
-      <Box className="flex justify-between gap-6 w-[90%] mt-8 my-0 mx-auto">
+      <Box className="flex justify-between gap-6 w-[90%] mt-8 pb-6 my-0 mx-auto">
         <Box>
           <Globe size="100" strokeWidth={1} />
           <p className="font-header text-2xl">International Shipping</p>

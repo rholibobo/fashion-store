@@ -51,9 +51,9 @@ const Testimonials = () => {
             }}
           >
             {testimonialData.map((info, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <Box
-                  key={index}
+                  
                   className="bg-white h-80 overflow-auto py-4 pl-4 pr-8"
                 >
                   <Box className="flex items-center gap-6">

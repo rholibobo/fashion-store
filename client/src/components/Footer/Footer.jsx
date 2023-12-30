@@ -22,18 +22,18 @@ function Footer() {
         </Box>
 
         <Box className="w-[30%] h-full">
-          <h3 className="font-header text-2xl">Pages</h3>
+          <h3 className="font-header text-2xl font-bold">Pages</h3>
           <br />
           <Box className="flex flex-col justify-between">
-            <Link href="#" className="text-sm hover:text-backgroundtext">
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
               Products Page
             </Link>
 
-            <Link href="#" className="text-sm hover:text-backgroundtext">
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
               Shops Page
             </Link>
 
-            <Link href="#" className="text-sm hover:text-backgroundtext">
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
               Shop Men
             </Link>
 
@@ -43,13 +43,34 @@ function Footer() {
           </Box>
         </Box>
         <Box className="w-[30%] h-full">
-          <h3 className="font-header text-xl">Contact Us</h3>
+          <h3 className="font-header text-2xl font-bold">Payment Method</h3>
           <br />
-          <p className="text-sm">Phone: +123456789</p>
+          <Box className="flex flex-col justify-between">
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
+              Paypal
+            </Link>
+
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
+              Card
+            </Link>
+
+            <Link href="#" className="text-sm hover:text-backgroundtext mb-2">
+              Stripe
+            </Link>
+
+            <Link href="#" className="text-sm  hover:text-backgroundtext">
+              Cash App
+            </Link>
+          </Box>
+        </Box>
+        <Box className="w-[30%] h-full">
+          <h3 className="font-header text-xl font-bold">Contact Us</h3>
+          <br />
+          <p className="text-sm mb-2">Phone: +123456789</p>
           <p className="text-sm">Email: africanfashionstore@gmail.com</p>
         </Box>
         <Box className="w-[30%] h-full">
-          <h3 className="font-header text-2xl">Newsletter</h3>
+          <h3 className="font-header text-2xl font-bold">Newsletter</h3>
           <br />
           <form>
             <Box className="py-2 px-3 bg-white">
@@ -62,9 +83,9 @@ function Footer() {
           </form>
 
           <Box className="w-1/2 mt-2">
-            <Box className="flex items-center justify-center gap-4 py-3 px-4 bg-background rounded-md text-white cursor-pointer ">
+            <Box className="flex items-center justify-center gap-4 py-2 px-6 bg-background rounded-md text-white cursor-pointer ">
               <Typography variant="body2">Subscribe </Typography>
-              <MoveRight />
+              <MoveRight className="text-white" />
             </Box>
           </Box>
         </Box>

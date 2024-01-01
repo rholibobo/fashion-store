@@ -7,7 +7,7 @@ import { FaFacebook,FaTwitter,FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="w-full h-auto bg-textblack pt-12 ">
+    <div className="w-full h-auto bg-textblack pt-12 mt-6 ">
       <Box className="w-[95%] my-0 mx-auto h-full flex gap-6 text-textwhite">
         <Box className="w-[30%] h-full">
           <Image src={Logo} alt="footer logo" className="w-12 h-auto" />

@@ -90,3 +90,10 @@ a {
   left: 0;
   background-blend-mode: soft-light;
 }
+@media screen and (max-width: 600px) {
+  .scntestimonial::before{
+    /* width: 100%; */
+    height: 100%;
+    /* z-index: -1; */
+  }
+}

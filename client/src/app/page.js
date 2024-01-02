@@ -20,11 +20,11 @@ export default function Home() {
         <HeroSection />
         <br />
         <br />
-        <br />
+        <br className="hidden md:block" />
         {/* Section 2 */}
-        <Box className="w-[95%]  my-0 mx-auto h-full flex justify-between items-center">
-          <Box className="w-1/2 ">
-            <h3 className="w-[60%] font-header text-5xl font-medium">
+        <Box className="w-full md:w-[95%] my-0 mx-auto h-full flex justify-between flex-col-reverse md:flex md:flex-row items-center">
+          <Box className="w-full md:w-1/2 mt-2 md:mt-0">
+            <h3 className="w-full md:w-[60%] font-header text-5xl font-medium">
               Limited Edition Collection
             </h3>
             <br />
@@ -38,13 +38,13 @@ export default function Home() {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
             <br />
-            <Box className="flex items-center justify-center w-[40%] h-[9vh] bg-black text-white border border-solid border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+            <Box className="flex items-center justify-center w-1/2 md:w-[40%] h-[6vh] md:h-[9vh] bg-black text-white border border-solid border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
               <Typography>Explore Collection </Typography>
             </Box>
           </Box>
 
-          <Box className="w-1/2 flex justify-end">
-            <Image src={Sctn2} alt="face" className="w-[70%] h-auto rounded" />
+          <Box className="w-full md:w-1/2 flex justify-end">
+            <Image src={Sctn2} alt="face" className="w-full md:w-[70%] h-auto rounded" />
           </Box>
         </Box>
         <br />
@@ -53,13 +53,13 @@ export default function Home() {
       </HeroContainer>
       {/* Section 3 */}
 
-      <Box className="w-full h-screen flex relative justify-end">
-        <Box className="w-[40%] absolute left-20 top-12">
-          <Image src={Sctn3} alt="scn3" className="w-full h-full" />
+      <Box className="w-full h-screen bg-background md:bg-transparent mt-8 md:mt-0 flex relative items-end md:items-start md:justify-end ">
+        <Box className="w-[80%] md:w-[40%] absolute left-12 md:left-20 -top-24 md:top-12">
+          <Image src={Sctn3} alt="scn3" className="w-full md:w-full h-full" />
         </Box>
 
-        <Box className="w-[70%] bg-background flex justify-end items-center">
-          <Box className="w-1/2 pr-8">
+        <Box className="w-full md:w-[70%] md:h-full bg-background flex justify-end items-center pl-4 md:pl-0 pb-8 md:pb-0">
+          <Box className="w-full md:w-1/2 pr-8">
             <h3 className="font-header text-5xl font-medium">
               Embrace The Latest Fashion Trends
             </h3>
@@ -74,7 +74,7 @@ export default function Home() {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
             <br />
-            <Box className="flex items-center justify-center w-[40%] h-[9vh] bg-black text-white border border-solid border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+            <Box className="flex items-center justify-center w-[40%] h-[7vh] md:h-[9vh] bg-black text-white border border-solid border-[#989898] cursor-pointer transition-colors duration-300 ease-linear  ">
               <Typography>Check It Out </Typography>
             </Box>
           </Box>
@@ -84,8 +84,9 @@ export default function Home() {
       {/* Section 4 */}
       <br />
       <br />
-      <br />
-      <br />
+      <br className="hidden md:block" />
+      <br className="hidden md:block" />
+      
       <Section4 />
 
       {/* Section 5 */}

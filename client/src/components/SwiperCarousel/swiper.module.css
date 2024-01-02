@@ -23,8 +23,8 @@
 .heroImages{
     width: 80%;
     height: 100%;
-   
 }
+
 
 .watch{
     position: absolute;
@@ -32,4 +32,13 @@
     right: -50%;
     width: 50%;
     height: auto;
+}
+@media screen and (max-width: 600px) {
+   .watch{
+    display: none;
+   } 
+   .heroImages{
+    width: 100%;
+    height: auto;
+   }
 }

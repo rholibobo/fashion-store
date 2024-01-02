@@ -70,11 +70,11 @@ a {
 }
 /*  */
 
-.scntestimonial{
+.scntestimonial {
   position: relative;
   background-color: #f4bf96;
 }
-.scntestimonial::before{
+.scntestimonial::before {
   content: "";
   background-color: #ac642d;
   /* display: flex;
@@ -91,9 +91,7 @@ a {
   background-blend-mode: soft-light;
 }
 @media screen and (max-width: 600px) {
-  .scntestimonial::before{
-    /* width: 100%; */
+  .scntestimonial::before {
     height: 100%;
-    /* z-index: -1; */
   }
 }

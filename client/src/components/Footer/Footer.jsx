@@ -8,12 +8,12 @@ import { FaFacebook,FaTwitter,FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div className="w-full h-auto bg-textblack pt-12 mt-6 ">
-      <Box className="w-[95%] my-0 mx-auto h-full flex gap-6 text-textwhite">
-        <Box className="w-[30%] h-full">
+      <Box className="w-[95%] my-0 mx-auto h-full flex flex-col md:flex-row gap-6 text-textwhite">
+        <Box className="w-full flex md:block flex-col md:flex-row items-center md:w-[30%] h-full">
           <Image src={Logo} alt="footer logo" className="w-12 h-auto" />
           <h3 className="font-header text-xl">African Fashion Store</h3>
           <br />
-          <p className="text-sm">
+          <p className="text-sm text-center md:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
             voluptate doloribus dolore tenetur dignissimos aperiam impedit
             harum? Nam adipisci velit ex, totam sit at vero, harum unde alias
@@ -21,7 +21,7 @@ function Footer() {
           </p>
         </Box>
 
-        <Box className="w-[30%] h-full">
+        <Box className="w-full flex md:block flex-col md:flex-row items-center md:w-[30%] h-full">
           <h3 className="font-header text-2xl font-bold">Pages</h3>
           <br />
           <Box className="flex flex-col justify-between">
@@ -42,7 +42,7 @@ function Footer() {
             </Link>
           </Box>
         </Box>
-        <Box className="w-[30%] h-full">
+        <Box className="w-full flex md:block flex-col md:flex-row items-center md:w-[30%] h-full">
           <h3 className="font-header text-2xl font-bold">Payment Method</h3>
           <br />
           <Box className="flex flex-col justify-between">
@@ -63,15 +63,15 @@ function Footer() {
             </Link>
           </Box>
         </Box>
-        <Box className="w-[30%] h-full">
-          <h3 className="font-header text-xl font-bold">Contact Us</h3>
+        <Box className="w-full flex md:block flex-col md:flex-row items-center md:w-[30%] h-full">
+          <h3 className="font-header text-2xl font-bold">Contact Us</h3>
           <br />
           <p className="text-sm mb-2">Phone: +123456789</p>
           <p className="text-sm">Email: africanfashionstore@gmail.com</p>
         </Box>
-        <Box className="w-[30%] h-full">
-          <h3 className="font-header text-2xl font-bold">Newsletter</h3>
-          <br />
+        <Box className="w-full md:w-[30%] flex md:block flex-col h-full">
+          <h3 className="font-header text-2xl font-bold text-center md:text-left">Newsletter</h3>
+          <br className="hidden md:block" />
           <form>
             <Box className="py-2 px-3 bg-white">
               <input
@@ -82,7 +82,7 @@ function Footer() {
             </Box>
           </form>
 
-          <Box className="w-1/2 mt-2">
+          <Box className="w-1/2 mt-2 my-0 mx-auto md:mx-0">
             <Box className="flex items-center justify-center gap-4 py-2 px-6 bg-background rounded-md text-white cursor-pointer ">
               <Typography variant="body2">Subscribe </Typography>
               <MoveRight className="text-white" />

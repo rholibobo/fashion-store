@@ -94,42 +94,42 @@ export default function Home() {
 
       {/* Section 6 */}
 
-      <Box className="flex justify-between gap-6 w-[90%] mt-8 pb-6 my-0 mx-auto">
-        <Box>
+      <Box className="flex :justify-between flex-col md:flex-row gap-6 w-[95%] md:w-[90%] mt-8 pb-6 my-0 mx-auto">
+        <Box className="flex flex-col items-center md:items-start">
           <Globe size="100" strokeWidth={1} />
           <p className="font-header text-2xl">International Shipping</p>
           <br />
-          <p className="text-grayshade text-sm">
+          <p className="text-grayshade text-sm text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
             augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
             objects were.
           </p>
         </Box>
-        <Box>
+        <Box className="flex flex-col items-center md:items-start">
           <FileText size="100" strokeWidth={1} />
           <p className="font-header text-2xl">Customer Care</p>
           <br />
-          <p className="text-grayshade text-sm">
+          <p className="text-grayshade text-sm text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
             augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
             objects were.
           </p>
         </Box>
-        <Box>
+        <Box className="flex flex-col items-center md:items-start">
         <ShieldCheck size="100" strokeWidth={1} />
           <p className="font-header text-2xl">Secure Payment</p>
           <br />
-          <p className="text-grayshade text-sm">
+          <p className="text-grayshade text-sm text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
             augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
             objects were.
           </p>
         </Box>
-        <Box>
+        <Box className="flex flex-col items-center md:items-start">
           <MessageSquareText size="100" strokeWidth={1} />
           <p className="font-header text-2xl">24/7 Support</p>
           <br />
-          <p className="text-grayshade text-sm">
+          <p className="text-grayshade text-sm text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
             augue nibh, at ullamcorper orci ullamcorper ut Ever lines honeyed
             objects were.

@@ -65,7 +65,7 @@ const Testimonials = () => {
             {testimonialData.map((info, index) => (
               <SwiperSlide key={index}>
                 <Box className="bg-white h-80 overflow-auto py-4 pl-4 pr-2 md:pr-8">
-                  <Box className="flex items-center">
+                  <Box className="flex items-center gap-6">
                     <Box className="w-12 h-12 rounded-full bg-background flex justify-center items-center">
                       <IoPersonSharp />
                     </Box>

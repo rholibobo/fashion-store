@@ -1,3 +1,5 @@
+"use client";
+
 import LoadingGif from "../../public/logo/loader.gif"
 
 export default function Loading() {

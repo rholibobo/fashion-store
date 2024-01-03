@@ -1,0 +1,12 @@
+{
+    "builds": [
+      {
+        "src": "client/**",
+        "use": "@vercel/next"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/client/index.html" }
+    ]
+  }

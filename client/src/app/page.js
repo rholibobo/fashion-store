@@ -44,7 +44,11 @@ export default function Home() {
           </Box>
 
           <Box className="w-full lg:w-1/2 flex justify-end">
-            <Image src={Sctn2} alt="face" className="w-full lg:w-[70%] h-auto rounded" />
+            <Image
+              src={Sctn2}
+              alt="face"
+              className="w-full lg:w-[70%] h-auto rounded"
+            />
           </Box>
         </Box>
         <br />
@@ -53,14 +57,14 @@ export default function Home() {
       </HeroContainer>
       {/* Section 3 */}
 
-      <Box className="w-full h-screen bg-background lg:bg-transparent mt-8 lg:mt-0 flex relative items-end lg:items-start lg:justify-end ">
-        <Box className="w-[80%] lg:w-[40%] absolute left-12 lg:left-24 -top-24 lg:top-12">
+      <Box className="w-full h-screen bg-background lg:bg-transparent mt-4 lg:mt-0 flex flex-col lg:flex-row relative items-end lg:items-start lg:justify-end pt-4">
+        <Box className="w-[80%] lg:w-[40%] my-0 mx-auto lg:absolute left-0 lg:left-24 -top-0 lg:top-12">
           <Image src={Sctn3} alt="scn3" className="w-full lg:w-full h-full" />
         </Box>
 
-        <Box className="w-full lg:w-[70%] lg:h-full bg-background flex justify-end items-center pl-4 lg:pl-0 pb-8 lg:pb-0">
+        <Box className="w-full lg:w-[70%] lg:h-full bg-background flex justify-end items-center pt-2 pl-4 lg:pl-0 pb-8 lg:pb-0">
           <Box className="w-full lg:w-1/2 pr-8">
-            <h3 className="font-header text-5xl font-medium">
+            <h3 className="font-header text-4xl lg:text-5xl font-medium">
               Embrace The Latest Fashion Trends
             </h3>
             <br />
@@ -84,9 +88,9 @@ export default function Home() {
       {/* Section 4 */}
       <br />
       <br />
-      <br className="hidden lg:block" />
-      <br className="hidden lg:block" />
-      
+      <br />
+      <br />
+
       <Section4 />
 
       {/* Section 5 */}
@@ -116,7 +120,7 @@ export default function Home() {
           </p>
         </Box>
         <Box className="flex flex-col items-center lg:items-start">
-        <ShieldCheck size="100" strokeWidth={1} />
+          <ShieldCheck size="100" strokeWidth={1} />
           <p className="font-header text-2xl">Secure Payment</p>
           <br />
           <p className="text-grayshade text-sm text-center lg:text-left">

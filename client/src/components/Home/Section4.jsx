@@ -42,9 +42,9 @@ const Section4 = () => {
   };
 
   return (
-    <Box className=" lg:w-[95%] my-o mx-auto mt-4 lg:mt-16 pb-8">
+    <Box className=" lg:w-[95%] my-0 mx-auto pt-8 lg:pt-16 pb-8">
       <Box className="w-[95%] lg:w-1/2 my-0 mx-auto">
-        <h3 className="font-header text-5xl font-medium text-center">
+        <h3 className="font-header text-4xl lg:text-5xl font-medium text-center">
           Top Picks For You
         </h3>
         <br />

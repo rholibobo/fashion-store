@@ -61,12 +61,12 @@ export default function MobileScreenNavbar() {
       <Box
         sx={{
           position: "fixed",
-          top: "70px",
+          // top: "70px",
           left: "0",
           width: "100%",
-          maxHeight: "90%",
+          // maxHeight: "90%",
           backgroundColor: "#FCF5ED",
-          zIndex: 10,
+          zIndex: 1000,
           overflowY: "auto",
         }}
         open={open}

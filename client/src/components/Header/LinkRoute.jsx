@@ -19,13 +19,10 @@ export function LinkRoutes() {
   const pathname = usePathname();
   return (
     
-      <div className={styles.links}>
+      <div className="w-[70%] flex justify-between items-center">
         <Box
-          sx={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
+          
+          className="w-[60%] flex justify-between"
         >
           <Link href="#">
             <p className={pathname == "/" ? styles.active : styles.links_text}>

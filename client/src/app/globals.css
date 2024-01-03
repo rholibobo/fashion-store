@@ -90,7 +90,7 @@ a {
   left: 0;
   background-blend-mode: soft-light;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .scntestimonial::before {
     height: 100%;
   }

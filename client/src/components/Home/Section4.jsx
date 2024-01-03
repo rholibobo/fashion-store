@@ -22,18 +22,12 @@ const Section4 = () => {
   const changeIndex = (index) => {
     setSelectedIndex(index);
   };
-  // const imageDisplay = (index) => {
-  //   const updatedState = [...chooseImage]
-
-  //   updatedImageState = updatedState[index]
-
-  // };
+  
   const handleButtonClick = (index) => {
     setObjectStates((prevObjectStates) => {
-      // Create a copy of the state to avoid modifying the original state directly
+      
       const updatedObjectStates = { ...prevObjectStates };
 
-      // Toggle the isImageChanged state for the clicked object
       updatedObjectStates[index] = {
         isImageChanged: !prevObjectStates[index]?.isImageChanged,
       };
@@ -41,29 +35,29 @@ const Section4 = () => {
       return updatedObjectStates;
     });
   };
-  // const changeArrow = (index) => {}
+ 
 
   const determineActive = (index) => {
     return index === selectedIndex ? "bg-background text-textwhite" : "";
   };
 
   return (
-    <Box className=" md:w-[95%] my-o mx-auto mt-4 md:mt-16 pb-8">
-      <Box className="w-[95%] md:w-1/2 my-0 mx-auto">
+    <Box className=" lg:w-[95%] my-o mx-auto mt-4 lg:mt-16 pb-8">
+      <Box className="w-[95%] lg:w-1/2 my-0 mx-auto">
         <h3 className="font-header text-5xl font-medium text-center">
           Top Picks For You
         </h3>
         <br />
         <br />
 
-        <Box className="flex justify-start md:justify-center">
+        <Box className="flex justify-start lg:justify-center">
           {headers.map((header, index) => (
             <Box
               key={index}
               onClick={() => changeIndex(index)}
               className={`${determineActive(
                 index
-              )} border-2 border-r border-l border-background border-solid py-2 md:py-4 px-6 md:px-8 cursor-pointer`}
+              )} border-2 border-r border-l border-background border-solid py-2 lg:py-4 px-5 md:px-20 lg:px-8 cursor-pointer`}
             >
               <Typography variant="body2">{header}</Typography>
             </Box>
@@ -72,7 +66,7 @@ const Section4 = () => {
       </Box>
 
       {selectedIndex == 0 && (
-        <Box className="px-1 flex flex-col md:flex-row justify-between mt-6">
+        <Box className="px-1 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {newArrivals.map((item, index) => (
             <Box key={index} className="">
               <Box className="w-full relative transition-all duration-300 ease-linear">
@@ -83,11 +77,11 @@ const Section4 = () => {
                       : item["backImage"]
                   }
                   alt="uyt"
-                  width={380}
+                  width={385}
                   height={450}
                   className="transition-transform duration-300 ease-linear "
                 />
-                <Box className="flex gap-4 absolute bottom-4 right-2 z-10">
+                <Box className="flex gap-4 absolute bottom-4 right-8 lg:right-4 z-10">
                   {!objectStates[index]?.isImageChanged ? (
                     <ArrowLeftCircle
                       size={20}
@@ -111,7 +105,7 @@ const Section4 = () => {
                 </h4>
               </Box>
 
-              <Box className="flex items-center justify-center w-[30%] h-[6vh] mt-2 mb-4 bg-black text-white border border-solid rounded-md border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+              <Box className="flex items-center justify-center w-[30%] h-[4vh] lg:h-[6vh] mt-2 mb-4 bg-black text-white border border-solid rounded-lg border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
                 <Typography variant="body2">Add to Cart </Typography>
               </Box>
             </Box>
@@ -119,7 +113,7 @@ const Section4 = () => {
         </Box>
       )}
       {selectedIndex == 1 && (
-        <Box className="flex flex-col md:flex-row justify-between mt-6">
+        <Box className="px-1 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {bestSeller.map((item, index) => (
             <Box key={index} className="">
               <Box className="w-full relative transition-all duration-300 ease-linear">
@@ -130,11 +124,11 @@ const Section4 = () => {
                       : item["backImage"]
                   }
                   alt="uyt"
-                  width={380}
+                  width={385}
                   height={450}
                   className="transition-transform duration-300 ease-linear "
                 />
-                <Box className="flex gap-4 absolute bottom-4 right-2 z-10">
+                <Box className="flex gap-4 absolute bottom-4 right-8 lg:right-4 z-10">
                   {!objectStates[index]?.isImageChanged ? (
                     <ArrowLeftCircle
                       size={20}
@@ -158,7 +152,7 @@ const Section4 = () => {
                 </h4>
               </Box>
 
-              <Box className="flex items-center justify-center w-[30%] h-[6vh] mt-2 mb-4  bg-black text-white border border-solid rounded-md border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+              <Box className="flex items-center justify-center w-[30%] h-[4vh] lg:h-[6vh] mt-2 mb-4  bg-black text-white border border-solid rounded-lg border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
                 <Typography variant="body2">Add to Cart </Typography>
               </Box>
             </Box>
@@ -166,7 +160,7 @@ const Section4 = () => {
         </Box>
       )}
       {selectedIndex == 2 && (
-        <Box className={`flex flex-col md:flex-row justify-between mt-6`}>
+        <Box className={`px-1 md:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6`}>
           {saleOff.map((item, index) => (
             <Box key={index} className="">
               <Box
@@ -179,11 +173,11 @@ const Section4 = () => {
                       : item["backImage"]
                   }
                   alt="uyt"
-                  width={380}
+                  width={385}
                   height={450}
                   className={`transition-transform duration-300 ease-linear`}
                 />
-                <Box className="flex gap-4 absolute bottom-4 right-2 z-10">
+                <Box className="flex gap-4 absolute bottom-4 right-8 lg:right-4 z-10">
                   {!objectStates[index]?.isImageChanged ? (
                     <ArrowLeftCircle
                       size={20}
@@ -207,7 +201,7 @@ const Section4 = () => {
                 </h4>
               </Box>
 
-              <Box className="flex items-center justify-center w-[30%] h-[6vh] mt-2 mb-4  bg-black text-white border border-solid rounded-md border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+              <Box className="flex items-center justify-center w-[30%] h-[4vh] lg:h-[6vh] mt-2 mb-4  bg-black text-white border border-solid rounded-lg border-[#989898] cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
                 <Typography variant="body2">Add to Cart </Typography>
               </Box>
             </Box>
@@ -215,8 +209,8 @@ const Section4 = () => {
         </Box>
       )}
       
-      <Box className="flex justify-center mt-2 md:mt-4">
-        <Box className="flex items-center justify-center gap-4 w-1/2 md:w-[20%] h-[7vh] md:h-[9vh] bg-black text-white cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
+      <Box className="flex justify-center mt-2 lg:mt-4">
+        <Box className="flex items-center justify-center gap-4 w-1/2 lg:w-[20%] h-[7vh] lg:h-[9vh] bg-black text-white cursor-pointer hover:text-white hover:bg-background transition-colors duration-300 ease-linear hover:border-[#F4BF96] ">
           <Typography variant="body2">View More </Typography>
           <MoveRight />
         </Box>

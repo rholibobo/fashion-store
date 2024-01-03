@@ -41,8 +41,8 @@ export default function HeroSection() {
   };
 
   return (
-    <Box className="w-full md:w-[85%] flex-col md:flex-row flex md:my-0 md:mx-auto relative">
-      <Box className="hidden md:w-1/2 md:h-32 md:flex md:flex-col md:justify-between md:absolute md:bottom-[40%] md:-left-24 md:z-10">
+    <Box className="w-full lg:w-[85%] flex-col lg:flex-row flex lg:my-0 lg:mx-auto relative">
+      <Box className="hidden lg:w-1/2 lg:h-32 lg:flex lg:flex-col lg:justify-between lg:absolute lg:bottom-[40%] lg:-left-24 lg:z-10">
         <Box className="flex items-center gap-2 py-2 pl-2">
           <div className={`${determineColor(0)} rounded-[50%]`}></div>
           <div className={`${showLine(0)}`}></div>
@@ -61,7 +61,7 @@ export default function HeroSection() {
           <div className={`${showLine(3)}`}></div>
         </Box>
       </Box>
-      <Box className="w-full md:w-1/2 relative">
+      <Box className="w-full lg:w-1/2 relative">
         <Swiper
           onSlideChange={(swiper) => handleSwiperSlideChange(swiper)}
           modules={[
@@ -99,7 +99,7 @@ export default function HeroSection() {
 
         <Box
           bgcolor="background.main"
-          className="w-32 h-32 flex justify-center items-center absolute -bottom-12 right-4 md:bottom-[10%] md:right-[5%] z-10"
+          className="w-32 h-32 flex justify-center items-center absolute -bottom-12 right-4 lg:bottom-[10%] lg:right-[5%] z-10"
         >
           <Typography
             color="whitebackground.main"
@@ -110,7 +110,7 @@ export default function HeroSection() {
           </Typography>
         </Box>
       </Box>
-      <Box className="hidden md:w-[8%] md:flex md:justify-end md:flex-col">
+      <Box className="hidden lg:w-[8%] lg:flex lg:justify-end lg:flex-col">
         <div className="button-prev">
           <MoveLeft size={45} className="cursor-pointer" />
         </div>
@@ -119,7 +119,7 @@ export default function HeroSection() {
         </div>
       </Box>
 
-      <Box className="w-full md:w-[35%] pt-6 flex flex-col justify-between">
+      <Box className="w-full lg:w-[35%] pt-6 flex flex-col justify-between">
         <Box sx={{ position: "relative" }}>
           <h3 className="font-header text-6xl font-medium">Discover</h3>
           <h3 className="font-header text-6xl font-medium">New Arrivals</h3>
@@ -140,15 +140,15 @@ export default function HeroSection() {
           </Typography>
         </Box>
 
-        <Box color="secondary.main" className="flex gap-3 mt-4 md:mt-0">
-          <Box className="animate-btn flex items-center justify-center w-[40%] h-[6vh] md:h-[10vh] border border-solid border-[#989898] cursor-pointer hover:text-white hover:border-[#F4BF96] ">
+        <Box color="secondary.main" className="flex gap-3 mt-4 lg:mt-0">
+          <Box className="animate-btn flex items-center justify-center w-[40%] h-[6vh] lg:h-[10vh] border border-solid border-[#989898] cursor-pointer hover:text-white hover:border-[#F4BF96] ">
             <Typography>Shop Women</Typography>
           </Box>
 
           <Box
             bgcolor="background.main"
             color="whitebackground.main"
-            className="action flex items-center justify-center w-[40%] h-[6vh] md:h-[10vh] border border-solid hover:border-[#989898] cursor-pointer"
+            className="action flex items-center justify-center w-[40%] h-[6vh] lg:h-[10vh] border border-solid hover:border-[#989898] cursor-pointer"
           >
             <Typography>Shop Men</Typography>
           </Box>

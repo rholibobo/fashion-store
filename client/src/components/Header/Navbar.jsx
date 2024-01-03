@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
-  const isMobileView = useMediaQuery("(max-width:1000px)");
+  const isMobileView = useMediaQuery("(max-width:1025px)");
   const pathname = usePathname();
 
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
@@ -61,12 +61,14 @@ export function Navbar() {
         <header
           className={`w-[90%] my-0 mx-auto flex justify-between items-center py-6`}
         >
-          <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
-            <Image src={Logo} alt="logo" className={styles.logo} />
-            <Typography gutterBottom>Logo</Typography>
+          <Box className="w-[65%] md:w-[90%] lg:w-[20%] flex gap-1 items-center justify-between lg:justify-start">
+            <Box className="flex gap-1 items-center">
+              <Image src={Logo} alt="logo" className={styles.logo} />
+              <p className="text-sm hidden xl:block">African Fashion Store</p>
+            </Box>
 
             {isMobileView && (
-              <Box sx={{ marginLeft: "5px", width: "60%" }}>
+              <Box className="w-[30%] ml-1">
                 <MobileAuthIcons />
               </Box>
             )}

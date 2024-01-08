@@ -8,35 +8,61 @@ import {
 import { Badge, Box, IconButton } from "@mui/material";
 
 import SearchBarModal from "../Modals/SearchbarModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const AuthIcons = () => {
   const [displayModal, setDisplayModal] = useState(false);
+  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
   const openModal = () => {
-    setDisplayModal((prev) => !prev)
-  }
+    setDisplayModal((prev) => !prev);
+  };
   const closeModal = () => {
-    setDisplayModal(false)
-  }
+    setDisplayModal(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      setIsHeaderFixed(scrollPosition > 600);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <Box
-      sx={{ width: "20%", display: "flex", justifyContent: "space-between",  alignItems: "center"  }}
+    <div
+      className={`w-[20%] flex justify-center gap-4 items-center ${
+        isHeaderFixed ? "text-backgroundtext" : ""
+      }`}
     >
-      <IconButton sx={{ color: "#1F1717" }} onClick={openModal}>
+      <IconButton
+        sx={isHeaderFixed ? { color: "#F4BF96" } : { color: "#1F1717" }}
+        onClick={openModal}
+      >
         <SearchOutlined sx={{ fontSize: 25 }} />
       </IconButton>
-      {displayModal && <SearchBarModal closeModal={closeModal}/>}
-      <IconButton sx={{ color: "#1F1717" }}>
+      {displayModal && <SearchBarModal closeModal={closeModal} />}
+      <IconButton
+        sx={isHeaderFixed ? { color: "#F4BF96" } : { color: "#1F1717" }}
+      >
         <PersonOutlined sx={{ fontSize: 25 }} />
       </IconButton>
-      <IconButton sx={{ color: "#1F1717" }}>
+      <IconButton
+        sx={isHeaderFixed ? { color: "#F4BF96" } : { color: "#1F1717" }}
+      >
         <Badge badgeContent={1} color="info">
-          <ShoppingCartOutlined sx={{ fontSize: 25, color: "#1F1717" }} />
+          <ShoppingCartOutlined
+            sx={isHeaderFixed ? { color: "#F4BF96" } : { color: "#1F1717" }}
+          />
         </Badge>
       </IconButton>
-    </Box>
+    </div>
   );
 };
 
@@ -44,19 +70,24 @@ export const MobileAuthIcons = () => {
   const [displayModal, setDisplayModal] = useState(false);
 
   const openModal = () => {
-    setDisplayModal((prev) => !prev)
-  }
+    setDisplayModal((prev) => !prev);
+  };
   const closeModal = () => {
-    setDisplayModal(false)
-  }
+    setDisplayModal(false);
+  };
   return (
     <Box
-      sx={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
     >
       <IconButton sx={{ color: "#1F1717" }} onClick={openModal}>
         <SearchOutlined sx={{ fontSize: 30 }} />
       </IconButton>
-      {displayModal && <SearchBarModal closeModal={closeModal}/>}
+      {displayModal && <SearchBarModal closeModal={closeModal} />}
       <IconButton sx={{ color: "#1F1717" }}>
         <PersonOutlined sx={{ fontSize: 30 }} />
       </IconButton>

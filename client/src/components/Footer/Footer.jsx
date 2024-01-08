@@ -21,7 +21,7 @@ function Footer() {
           </p>
         </Box>
 
-        <Box className="w-full flex lg:block flex-col lg:flex-row items-center  h-full">
+        <Box className="w-full flex lg:block flex-col lg:flex-row items-center h-full">
           <h3 className="font-header text-2xl font-bold">Pages</h3>
           <br />
           <Box className="flex flex-col justify-between">

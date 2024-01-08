@@ -5,13 +5,12 @@
   align-items: center;
   /* border: 1px s; */
 }
-
 .links_text {
   font-size: 0.9rem;
   padding: 10px;
 }
 .links_text:hover{
-    color: #ce5a67;
+  color: #F4BF96;
 }
 .links_pages {
   font-size: 0.85rem;
@@ -42,9 +41,9 @@
 .active {
   font-size: 0.9rem;
   padding-bottom: 5px;
-  padding: 10px;
-  color: #ce5a67;
-  border-bottom: 1.5px dotted #ce5a67;
+  padding: 7px;
+  color: #F4BF96;
+  border-bottom: 1.5px dotted #F4BF96;
 }
 .pages {
   position: relative;
@@ -96,12 +95,12 @@
 /* Mobile Navbar styles */
 .link_tag {
   text-decoration: none;
-  color: #CE5A67;
+  color: #F4BF96;
   font-size: 0.9rem;
   
 }
 .iconHover {
-  color: #CE5A67;
+  color: #F4BF96;
 }
 .buttonHover{
   background-color: red;

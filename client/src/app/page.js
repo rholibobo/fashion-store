@@ -99,7 +99,7 @@ export default function Home() {
       {/* Section 6 */}
 
       <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[95%] lg:w-[90%] mt-8 pb-6 my-0 mx-auto">
-        <Box className="flex flex-col items-center">
+        <Box className="flex flex-col items-center lg:items-start">
           <Globe size="100" strokeWidth={1} />
           <p className="font-header text-2xl">International Shipping</p>
           <br />

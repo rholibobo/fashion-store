@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import styles from "./header.module.css";
 
 import { LinkRoutes } from "./LinkRoute";
@@ -14,8 +14,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
-  const isMobileView = useMediaQuery("(max-width:1025px)");
-  
+  const theme = useTheme();
+  const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
+
   const pathname = usePathname();
 
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
@@ -55,7 +56,7 @@ export function Navbar() {
       <main
         className={`${
           isHeaderFixed
-            ? "fixed top-0 left-0 w-full  bg-gray-50 z-50 transition-all duration-500 ease-in bg-opacity-95"
+            ? "fixed top-0 left-0 w-full text-backgroundtext bg-gray-50 z-50 transition-all duration-500 ease-in bg-opacity-95"
             : ""
         }`}
       >
@@ -72,18 +73,17 @@ export function Navbar() {
             <Box className="block lg:hidden w-[30%] ml-1">
               <MobileAuthIcons />
             </Box>
-            {/* // )} */}
+            {/* )} */}
           </Box>
 
           {isMobileView ? <MobileScreenNavbar /> : <LinkRoutes />}
-          
-            {/* <Box className="block lg:hidden">
-              <MobileScreenNavbar />
-            </Box>
-            <Box className=" hidden lg:block">
-              <LinkRoutes />
-            </Box> */}
-          
+
+          {/* <div className="block lg:hidden">
+            <MobileScreenNavbar />
+          </div>
+          <div className="hidden lg:flex lg:w-full lg:my-0 lg:mx-auto ">
+            <LinkRoutes />
+          </div> */}
         </header>
       </main>
     );

@@ -24,16 +24,16 @@ export function LinkRoutes() {
           
           className="w-[60%] flex justify-between"
         >
-          <Link href="#">
+          <Link href="/">
             <p className={pathname == "/" ? styles.active : styles.links_text}>
               Home
             </p>
           </Link>
 
-          <Link href="#">
+          <Link href="/about-us">
             <p
               className={
-                pathname == "about-us" ? styles.active : styles.links_text
+                pathname == "/about-us" ? styles.active : styles.links_text
               }
             >
               About Us

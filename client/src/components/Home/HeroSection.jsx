@@ -120,9 +120,9 @@ export default function HeroSection() {
       </Box>
 
       <Box className="w-full lg:w-[35%] pt-6 flex flex-col justify-between">
-        <Box sx={{ position: "relative" }}>
-          <h3 className="font-header text-6xl font-medium">Discover</h3>
-          <h3 className="font-header text-6xl font-medium">New Arrivals</h3>
+        <Box className="relative mt-2">
+          <h3 className="font-header text-5xl lg:text-6xl font-medium">Discover</h3>
+          <h3 className="font-header text-5xl lg:text-6xl font-medium">New Arrivals</h3>
           <Typography color="secondary.main">Latest collection</Typography>
 
           <Image src={wristwatch} alt="watch" className={style.watch} />

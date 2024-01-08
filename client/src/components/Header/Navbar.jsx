@@ -15,12 +15,7 @@ import { useEffect, useState } from "react";
 
 export function Navbar() {
   const isMobileView = useMediaQuery("(max-width:1025px)");
-  // const [isMobileView, setIsMobileView] = useState(0)
-
-  // useEffect(() => {
-  //   setIsMobileView(1024)
-  // }, [])
-  // const isMobileView = window.innerWidth;
+  
   const pathname = usePathname();
 
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
